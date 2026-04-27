@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "plan": "Basic Plan",
+    "price": 20,
+    "duration": "month",
+    "description": "Perfect for beginners who want to start their fitness journey with essential gym facilities.",
+    "features": [
+      "Access to gym equipment",
+      "Locker facility",
+      "Free WiFi",
+      "1 Fitness assessment",
+      "Access to cardio zone",
+      "Basic workout guidance",
+      "Changing room access",
+      "Water station access"
+    ]
+  },
+  {
+    "id": 2,
+    "plan": "Standard Plan",
+    "price": 40,
+    "duration": "month",
+    "description": "Ideal for regular gym members who want extra support and group training sessions.",
+    "features": [
+      "Access to gym equipment",
+      "Locker facility",
+      "Group fitness classes",
+      "Diet consultation",
+      "2 Personal training sessions",
+      "Cardio + strength training zone",
+      "Body composition analysis",
+      "Yoga classes",
+      "Zumba sessions",
+      "Steam room access"
+    ]
+  },
+  {
+    "id": 3,
+    "plan": "Premium Plan",
+    "price": 70,
+    "duration": "month",
+    "description": "Best for serious fitness enthusiasts who need advanced training and personalized fitness plans.",
+    "features": [
+      "Unlimited gym access",
+      "Locker + shower facility",
+      "All group classes",
+      "Personal trainer support",
+      "Diet chart & nutrition guide",
+      "5 Personal training sessions",
+      "Progress tracking",
+      "Recovery zone access",
+      "Sauna access",
+      "Free protein shake (weekly)",
+      "Priority booking for classes"
+    ]
+  },
+  {
+    "id": 4,
+    "plan": "Elite Plan",
+    "price": 120,
+    "duration": "month",
+    "description": "Designed for athletes and premium members who want full-service fitness and recovery support.",
+    "features": [
+      "24/7 gym access",
+      "Private locker",
+      "Unlimited personal training",
+      "Customized diet plan",
+      "Spa & recovery zone",
+      "VIP lounge access",
+      "Sports massage sessions",
+      "Advanced health monitoring",
+      "Exclusive fitness workshops",
+      "Unlimited sauna & steam room",
+      "Dedicated fitness coach",
+      "Supplement consultation",
+      "Priority support"
+    ]
+  }
+]

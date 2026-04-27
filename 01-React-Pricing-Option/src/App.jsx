@@ -1,16 +1,13 @@
+import "./App.css";
+import NavData from "./component/NavData";
 
-import './App.css'
 
 function App() {
-
-
   return (
     <div>
-<h1>hello
-
-</h1>
+      <NavData></NavData>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
