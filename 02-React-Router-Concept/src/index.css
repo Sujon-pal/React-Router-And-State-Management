@@ -1,2 +1,8 @@
 @import "tailwindcss";
 @import "daisyui/daisyui.css";
+
+nav a.active {
+  color: blueviolet;
+  border-radius: 10px;
+}
+

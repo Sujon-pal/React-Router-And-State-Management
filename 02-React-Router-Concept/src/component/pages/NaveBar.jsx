@@ -1,3 +1,4 @@
+import { Link, NavLink } from "react-router";
 
 
 const NaveBar = () => {
@@ -6,6 +7,12 @@ const NaveBar = () => {
   <div className="flex-1">
     <a className="btn btn-ghost text-xl">daisyUI</a>
   </div>
+   <nav className="text-gray-600 font-semibold flex gap-8 pr-10">
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/product">Product</NavLink>
+        <NavLink to="/ProductDetails">ProductDetails</NavLink>
+        <NavLink to="/">Contact</NavLink>
+      </nav>
   <div className="flex-none">
     <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -34,17 +41,18 @@ const NaveBar = () => {
             src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
         </div>
       </div>
+     
       <ul
         tabIndex="-1"
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         <li>
-          <a className="justify-between">
+          <Link className="justify-between">
             Profile
             <span className="badge">New</span>
-          </a>
+          </Link>
         </li>
-        <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
+        <li><Link>Settings</Link></li>
+        <li><Link>Logout</Link></li>
       </ul>
     </div>
   </div>

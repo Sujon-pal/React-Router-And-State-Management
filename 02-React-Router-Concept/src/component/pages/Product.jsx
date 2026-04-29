@@ -80,7 +80,7 @@ const Product = () => {
         Our Bike Collection
       </h2>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {bikes.map((bike) => (
           <div
             key={bike.id}

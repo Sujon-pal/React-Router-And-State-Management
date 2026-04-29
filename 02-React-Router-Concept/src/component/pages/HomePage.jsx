@@ -93,10 +93,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="footer footer-center p-10 bg-neutral text-neutral-content">
-        <p>© 2026 Bike Shop - All rights reserved</p>
-      </footer>
+    
     </div>
   );
 };
