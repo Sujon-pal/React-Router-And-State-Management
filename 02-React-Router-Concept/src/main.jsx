@@ -10,6 +10,7 @@ import Product from "./component/pages/Product.jsx";
 import ProductDetails from "./component/pages/ProductDetails.jsx";
 import User from "./component/pages/User.jsx";
 import UserDetails from "./component/pages/UserDetails.jsx";
+import ErrorPage from "./component/pages/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -39,7 +40,15 @@ const router = createBrowserRouter([
           fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
         Component: UserDetails,
       },
+      // {
+      //   path:'*',
+      //   Component : ErrorPage
+      // }
     ],
+  },
+  {
+    path: "*",
+    Component: ErrorPage,
   },
 ]);
 

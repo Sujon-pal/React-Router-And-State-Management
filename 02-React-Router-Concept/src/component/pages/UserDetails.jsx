@@ -1,7 +1,10 @@
-import { useLoaderData, Link } from "react-router-dom";
+import { useLoaderData, Link, useParams } from "react-router-dom";
 
 const UserDetails = () => {
   const user = useLoaderData();
+
+  const params = useParams();
+  console.log(params)
 
   return (
     <div className="min-h-screen bg-base-200 flex items-center justify-center p-6">
