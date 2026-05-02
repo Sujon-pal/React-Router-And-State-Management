@@ -1,0 +1,152 @@
+
+REACT ROUTER CHEAT SHEET 
+
+
+1. INSTALL
+----------------
+npm install react-router-dom
+
+
+2. BASIC SETUP (main.jsx)
+--------------------------
+import { BrowserRouter } from "react-router-dom";
+
+<BrowserRouter>
+  <App />
+</BrowserRouter>
+
+
+3. ROUTES SETUP (App.jsx)
+--------------------------
+import { Routes, Route } from "react-router-dom";
+
+<Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/about" element={<About />} />
+</Routes>
+
+
+4. NAVIGATION
+----------------
+
+Link (no reload):
+import { Link } from "react-router-dom";
+
+<Link to="/about">About</Link>
+
+
+NavLink (active style):
+import { NavLink } from "react-router-dom";
+
+<NavLink
+  to="/about"
+  className={({ isActive }) => isActive ? "active" : ""}
+>
+  About
+</NavLink>
+
+
+5. LAYOUT ROUTE (IMPORTANT)
+----------------------------
+Used for Navbar/Footer reuse
+
+<Route path="/" element={<MainLayout />}>
+  <Route index element={<Home />} />
+  <Route path="about" element={<About />} />
+</Route>
+
+MainLayout.jsx:
+import { Outlet } from "react-router-dom";
+
+function MainLayout(){
+  return (
+    <>
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </>
+  )
+}
+
+
+6. NESTED ROUTE
+----------------
+<Route path="/dashboard" element={<Dashboard />}>
+  <Route path="profile" element={<Profile />} />
+  <Route path="settings" element={<Settings />} />
+</Route>
+
+URL:
+- /dashboard/profile
+- /dashboard/settings
+
+
+7. DYNAMIC ROUTE (IMPORTANT)
+----------------------------
+<Route path="/user/:id" element={<User />} />
+
+User.jsx:
+import { useParams } from "react-router-dom";
+
+const { id } = useParams();
+
+USE:
+/ user/10 → id = 10
+
+
+8. PROGRAMMATIC NAVIGATION
+--------------------------
+import { useNavigate } from "react-router-dom";
+
+const navigate = useNavigate();
+
+navigate("/dashboard");
+
+
+9. 404 PAGE
+----------------
+<Route path="*" element={<NotFound />} />
+
+
+10. PROTECTED ROUTE (AUTH)
+--------------------------
+const PrivateRoute = ({ children }) => {
+  const user = false;
+
+  return user ? children : <Navigate to="/login" />;
+};
+
+USE:
+<Route
+  path="/dashboard"
+  element={
+    <PrivateRoute>
+      <Dashboard />
+    </PrivateRoute>
+  }
+/>
+
+
+11. USE IN PROJECT FLOW (REAL THINKING)
+----------------------------------------
+STEP 1: Layout (Navbar + Footer)
+STEP 2: Routes setup
+STEP 3: Pages create
+STEP 4: Nested route (dashboard)
+STEP 5: Dynamic route (id)
+STEP 6: Navigation (Link/NavLink)
+STEP 7: API connect
+STEP 8: Private route (auth)
+STEP 9: 404 page
+
+
+12. QUICK MEMORY TRICK
+----------------------
+Link        → navigate
+NavLink     → active link highlight
+Outlet      → child page show
+useParams   → URL data
+useNavigate → redirect
+Layout      → UI reuse
+PrivateRoute→ security
+
