@@ -11,7 +11,7 @@ const NaveBar = () => {
         <NavLink to="/">Home</NavLink>
         <NavLink to="/product">Product</NavLink>
         <NavLink to="/ProductDetails">ProductDetails</NavLink>
-        <NavLink to="/">Contact</NavLink>
+        <NavLink to="/user">User</NavLink>
       </nav>
   <div className="flex-none">
     <div className="dropdown dropdown-end">
