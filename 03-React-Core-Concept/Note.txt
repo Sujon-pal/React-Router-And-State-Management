@@ -1,0 +1,41 @@
+React Form Data (onSubmit + e.target)
+Form Submit ধরতে:
+<form onSubmit={handleSubmit}>
+
+→ onSubmit form submit event handle করে 
+
+Page Reload বন্ধ করতে:
+e.preventDefault();
+→ form submit হলে page reload বন্ধ করে
+
+Form Access করতে:
+const form = e.target;
+
+→ e.target = পুরো form
+
+Input Value নিতে:
+const name = form.name.value;
+const email = form.email.value;
+
+Shortcut:
+
+const name = e.target.name.value;
+Full Example:
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  const form = e.target;
+
+  const name = form.name.value;
+  const email = form.email.value;
+
+  console.log(name, email);
+
+  form.reset();
+};
+<form onSubmit={handleSubmit}>
+  <input type="text" name="name" />
+  <input type="email" name="email" />
+  <button type="submit">Submit</button>
+</form>
+
