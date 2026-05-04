@@ -1,12 +1,13 @@
-import Form from "./component/Page/Form";
-import Nav from "./component/Page/Nav";
-
+import Nav from "./component/Nav";
+import Form from "./Page/Form";
+import FormAction from "./Page/FormAction";
 
 const App = () => {
   return (
     <div>
       <Nav></Nav>
-      <Form></Form>
+      {/* <Form></Form> */}
+      <FormAction></FormAction>
     </div>
   );
 };

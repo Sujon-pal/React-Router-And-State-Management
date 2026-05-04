@@ -1,9 +1,9 @@
 
 
 const Nav = () => {
-    return (
-        <div>
-            <div className="navbar bg-base-100 shadow-sm">
+  return (
+    <div>
+      <div className="navbar bg-base-100 shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -44,8 +44,8 @@ const Nav = () => {
     <a className="btn">Button</a>
   </div>
 </div>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Nav;
