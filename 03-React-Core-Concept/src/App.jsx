@@ -2,6 +2,7 @@ import Nav from "./component/Nav";
 import ControlledField from "./Page/ControlledField";
 import Form from "./Page/Form";
 import FormAction from "./Page/FormAction";
+import Hook from "./Page/Hook";
 import UnControlled from "./Page/UnControlled";
 
 const App = () => {
@@ -12,7 +13,8 @@ const App = () => {
       {/* <FormAction></FormAction> */}
     
       {/* <ControlledField></ControlledField> */}
-      <UnControlled></UnControlled>
+      {/* <UnControlled></UnControlled> */}
+      <Hook></Hook>
     </div>
   );
 };
