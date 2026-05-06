@@ -1,31 +1,20 @@
-import { useState } from "react";
+import { useRef } from "react";
 
-const ControlledField = () => {
-  const [password, setPassword] = useState("");
-
-  const [error, setError] = useState("");
-
+const UnControlled = () => {
+  const emailRef = useRef("");
+  const passwordRef = useRef("");
   const handleFormData = (e) => {
     e.preventDefault();
-    console.log(password);
+    console.log(emailRef.current.value);
+    console.log(passwordRef.current.value);
   };
-
-  const handlePasswordOnChange = (e) => {
-    setPassword(e.target.value);
-    if (password.length < 6) {
-      setError("Password Must Be 6 Character");
-    } else {
-      setError("");
-    }
-  };
-
   return (
     <div className="min-h-screen flex justify-center items-center bg-base-200">
       <div className="card w-full max-w-md shadow-2xl bg-base-100">
         <div className="card-body">
           <h2 className="text-3xl font-bold text-center mb-6">
             {" "}
-            Form ControlledField
+            Form uncontrolled
           </h2>
 
           <form onSubmit={handleFormData} className="space-y-4">
@@ -34,6 +23,7 @@ const ControlledField = () => {
               <input
                 required
                 type="email"
+                ref={emailRef}
                 name="email"
                 placeholder="Enter your email"
                 className="input input-bordered w-full"
@@ -45,9 +35,8 @@ const ControlledField = () => {
               <input
                 required
                 type="password"
+                ref={passwordRef}
                 name="password"
-                // defaultValue={password}
-                onChange={handlePasswordOnChange}
                 placeholder="Enter password"
                 className="input input-bordered w-full"
               />
@@ -55,11 +44,10 @@ const ControlledField = () => {
 
             <button className="btn btn-primary w-full mt-4">Submit</button>
           </form>
-          <p className="font-bold text-red-600">{error}</p>
         </div>
       </div>
     </div>
   );
 };
 
-export default ControlledField;
+export default UnControlled;
